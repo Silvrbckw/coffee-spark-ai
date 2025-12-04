@@ -1,0 +1,31 @@
+{
+  "name": "Sparks AI Firebase Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    // Optionally add specific Node version if needed
+    // "ghcr.io/devcontainers/features/node:1": {
+    //   "version": "lts"
+    // }
+  },
+  "forwardPorts": [
+    3000,
+    3001,
+    5001,
+    8080,
+    9099,
+    4000
+  ],
+  "postCreateCommand": "npm install -g firebase-tools && firebase login --no-sandbox && firebase use sparks-ai-project-id",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "firebase.firebase-tools",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      }
+    }
+  }
+}
