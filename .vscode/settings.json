@@ -3,5 +3,6 @@
     "IDX.aI.enableCodebaseIndexing": true,
     "eslint.workingDirectories": [
         "services/cloud-run"
-    ]
+    ],
+    "files.autoSave": "onFocusChange"
 }
